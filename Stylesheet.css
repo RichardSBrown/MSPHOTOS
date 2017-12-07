@@ -97,12 +97,12 @@
 
 
 
+
 #FrontNavBar
 {
-	padding-top: 10%;
-	padding-left: 10%;
-	padding-right: 10%;
-	max-width: 80%;
+	background-color: black;
+	padding-left: 25%;
+	padding-right: 25%;
 }
 
 #FrontNavBar li
@@ -119,14 +119,12 @@
 #FrontNavBar a
 {
 	padding-left: 10px;
-
 }
 
 #FrontNavBar li a
 {
 	display: block;
 	color: white;
-	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 
@@ -156,16 +154,17 @@
 {
 	max-width: 80%;
 	padding-top: 1%;
-	padding-left: 10%;
-	padding-right: 10%;
-	border-style: solid;
-	border-size: 1px;
-
+	padding-left: 25%;
+	padding-right: 25%;
+	/*border-style: solid;*/
+	/*border-size: 1px;*/
 }
 #MiddleScreenText img
 {
 	max-width: 80%;
-	height: 500px;
-	width: 750px;
-
+	height: 400px;
+	width: 670px;
 }
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
