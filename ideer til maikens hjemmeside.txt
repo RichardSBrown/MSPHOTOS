@@ -1,0 +1,1 @@
+oncontextmenu="return false"; // gør så man ikke højre klik
