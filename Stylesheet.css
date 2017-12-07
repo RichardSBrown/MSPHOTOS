@@ -1,0 +1,171 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#FrontNavBar
+{
+	padding-top: 10%;
+	padding-left: 10%;
+	padding-right: 10%;
+	max-width: 80%;
+}
+
+#FrontNavBar li
+{
+	float: left;
+	border-right: 1px solid #bbb;
+}
+
+#FrontNavBar li:last-child
+{
+	border-right: none;
+}
+
+#FrontNavBar a
+{
+	padding-left: 10px;
+
+}
+
+#FrontNavBar li a
+{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+
+}
+
+#FrontNavBar li a.hover
+{
+	background-color: #111;
+}
+
+#FrontNavBar ul 
+{
+	overflow: hidden;
+	background-color: black;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ative
+{
+	background-color: gray;
+
+}
+
+#MiddleScreenText
+{
+	max-width: 80%;
+	padding-top: 1%;
+	padding-left: 10%;
+	padding-right: 10%;
+	border-style: solid;
+	border-size: 1px;
+
+}
+#MiddleScreenText img
+{
+	max-width: 80%;
+	height: 500px;
+	width: 750px;
+
+}
