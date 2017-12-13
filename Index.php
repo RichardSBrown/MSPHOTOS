@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'header.php' ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" type="text/css" href="Stylesheet.css">
@@ -11,10 +10,9 @@
 
 <style>
 
-.mySlides {display:none}
+.mySlides {display:none; max-height: 500px;}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
-
 
 </style>
 
@@ -25,50 +23,54 @@
 	</div>
 <!-- Nav bar -->
 <div id="FrontNavBar">
-	<center><ul id = "FrontNavBar">
+	<center>
+		<ul id = "FrontNavBar">
 		<li><a class="ative" href=""> FORSIDE </a></li>	
 		<li><a href=""> GRAVID </a></li>	
 		<li><a href=""> BØRN / FAMILIE </a></li>	
 		<li><a href=""> BRYLLUP </a></li>
 		<li><a href=""> MODE </a></li>	
 		<li style="float: ;"><a href=""> ANDET </a></li>
-	</ul></center>
+	</ul>
+	</center>
 </div>
 <!-- End of nav bar -->
 
+<div class="w3-content w3-display-container" style="max-width:800px; background-color: gray;">
 
+    <!-- poster hvert billed der er i mappen[Billeder] -->
+    <?php
+    // Fortæller hvor hvad for en mappe den skal kigge i.
+    $dirname = "Billeder/";
 
-<!-- Billed slideshow body -->
-<!--<div id="MiddleScreenText" class="w3-content w3-display-container" >
+    // Enhver fil der lægger i den mappe som ender på .jpg, henter den.
+    $images = glob($dirname."*.jpg");
 
-	<img class="mySlides" src="Billeder/Test.jpg">
-	<img class="mySlides" src="img_fjords.jpg">
-	<img class="mySlides" src="img_lights.jpg">
-	<img class="mySlides" src="img_mountains.jpg">
-	<img class="mySlides" src="img_forest.jpg">
+    // For hver .jpg den finder printer den det så ud i vores diashow.
+    foreach ($images as $image) {
+    	// Echo'er billedet
+    	echo '<img class="mySlides" style="width:100%" src="' . $image . '" />';
+	}
+	?>
+    <!-- End of for each loopet -->
 
-	<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-	<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-		
-	<div class="w3-center w3-display-bottommiddle" style="width:100%">
-	
-	<span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
-
-</div> -->
-</div>
-
-<div class="w3-content w3-display-container" style="max-width:800px">
-  <img class="mySlides" src="Billeder/Test.jpg" style="width:100%">
-  <img class="mySlides" src="Billeder/Test.jpg" style="width:100%">
-  <img class="mySlides" src="Billeder/Test.jpg" style="width:100%">
-  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <!-- Knapperne der går til højre og venste -->
+   	<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%;">
     <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
     <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    <!-- End of knapperne -->
+
+    <?php
+    $count = 0;
+    foreach ($images as $image) {
+    	// Count skal bruges til at vise hvad for et billed brugeren er på.
+    	$count++;
+
+    	// Echo Bublerne i bunden af billedet for at viser hvad for et billed vi er på.
+    	echo '<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv('. $count .')"></span>';
+
+    }
+    ?>
   </div>
 </div>
 <!-- End of slideshow body -->
