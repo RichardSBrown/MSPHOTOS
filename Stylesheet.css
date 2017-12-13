@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+------------ Header ---------------
 /* Navbar container/ hele navbaren */
 .navbar {
   overflow: hidden;
@@ -68,107 +68,9 @@
 .dropdown:hover .dropdown-content {
   display: block;
 } 
-=======
+-------------- End of Header --------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-------------- Front ----------------
 #FrontNavBar
 {
 	background-color: black;
@@ -236,7 +138,4 @@
 	height: 400px;
 	width: 670px;
 }
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
->>>>>>> 403bf8bccbb592af66a01de038d805bd4679c25e
+----------- End of Front -----------
