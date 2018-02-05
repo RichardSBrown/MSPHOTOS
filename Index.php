@@ -42,7 +42,7 @@
 </div>
 <!-- End of nav bar -->
 
-<div class="w3-content w3-display-container" style="max-width:55%; height: screen.height - 5px; background-color: gray;">
+<div class="w3-content w3-display-container" style="max-width:55%; height: screen.height - 5px; background-color: gray; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
 
     <!-- poster hvert billed der er i mappen[Billeder] -->
     <?php

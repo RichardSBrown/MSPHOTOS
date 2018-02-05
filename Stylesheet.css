@@ -138,6 +138,8 @@
 
 /*----------- End of Front -----------*/
 #kontakt {
+  text-align: center;
+  font: status-bar;
   width: 100%;
   position: absolute; 
   bottom: 0px;
