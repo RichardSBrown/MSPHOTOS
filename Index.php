@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title>MSPHOTO</title>
 	<meta charset="utf-8">
 </head>
@@ -30,13 +31,18 @@
 		<li><a href=""> BØRN / FAMILIE </a></li>	
 		<li><a href=""> BRYLLUP </a></li>
 		<li><a href=""> MODE </a></li>	
-		<li style="float: ;"><a href=""> ANDET </a></li>
+		<li><a class="dropbtn" href=""> ANDET </a></li>
+			<div class="dropdown-content" >
+				<li><a>	Link1 </a></li>
+				<li><a> Link2 </a></li>
+				<li><a> Link3 </a></li>
+			</div>
 	</ul>
 	</center>
 </div>
 <!-- End of nav bar -->
 
-<div class="w3-content w3-display-container" style="max-width:800px; background-color: gray;">
+<div class="w3-content w3-display-container" style="max-width:55%; height: screen.height - 5px; background-color: gray;">
 
     <!-- poster hvert billed der er i mappen[Billeder] -->
     <?php
@@ -49,7 +55,7 @@
     // For hver .jpg den finder printer den det så ud i vores diashow.
     foreach ($images as $image) {
     	// Echo'er billedet
-    	echo '<img class="mySlides" style="width:100%" src="' . $image . '" />';
+    	echo '<img class="mySlides" style="display: block; margin-left: auto; margin-right: auto;" src="' . $image . '" />';
 	}
 	?>
     <!-- End of for each loopet -->
@@ -76,14 +82,19 @@
 <!-- End of slideshow body -->
 
 <!-- Info bar -->
-<div>
-	i think there is some text here, not sure tho.
-</div>
+<footer id="kontakt">
+	<div>		
+		<?php
+		include "Footer.php";
+		?>
+	</div>
+</footer>
 <!-- End of Info bar -->
 </body>
 </html>
 
 <script>
+	// Dia show script
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -110,4 +121,30 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " w3-white";
 }
+	// End of dia show script
+</script>
+
+
+<script type="text/javascript">
+	 $(document).ready(function(){
+	 	var knap = $(".dropbtn");
+	 	var div = $(".dropdown-content");
+
+	 	div.mouseenter(function(){
+	 		div.show();
+	 	})
+	 	div.mouseleave(function(){
+	 		div.hide();
+	 	}) 
+
+	 	knap.mouseenter(function(){
+	 		div.show();
+	 	})
+	 	knap.mouseleave(function(){
+	 		div.hide();
+	 	})  
+	});
+
+
+
 </script>

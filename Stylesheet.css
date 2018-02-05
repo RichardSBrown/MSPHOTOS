@@ -1,4 +1,4 @@
------------- Header ---------------
+/*------------ Header ---------------*/
 /* Navbar container/ hele navbaren */
 .navbar {
   overflow: hidden;
@@ -41,7 +41,7 @@
 /* Dropdown indhold (gemt som standart) */
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -64,24 +64,19 @@
   background-color: #ddd;
 }
 
-/* Viser dropdown menu nåe man holder musen over */
-.dropdown:hover .dropdown-content {
-  display: block;
-} 
--------------- End of Header --------
+/*-------------- End of Header --------*/
 
--------------- Front ----------------
+/*-------------- Front ----------------*/
+
 #FrontNavBar
 {
 	background-color: black;
-	padding-left: 25%;
-	padding-right: 25%;
 }
 
 #FrontNavBar li
 {
 	float: left;
-	border-right: 1px solid #bbb;
+	border-left: 1px solid #bbb;
 }
 
 #FrontNavBar li:last-child
@@ -103,7 +98,7 @@
 
 }
 
-#FrontNavBar li a.hover
+#FrontNavBar li a:hover
 {
 	background-color: #111;
 }
@@ -138,4 +133,13 @@
 	height: 400px;
 	width: 670px;
 }
------------ End of Front -----------
+
+
+
+/*----------- End of Front -----------*/
+#kontakt {
+  width: 100%;
+  position: absolute; 
+  bottom: 0px;
+  background-color: #C2B280;
+}
