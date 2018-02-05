@@ -42,7 +42,8 @@
 </div>
 <!-- End of nav bar -->
 
-<div class="w3-content w3-display-container" style="max-width:55%; height: screen.height - 5px; background-color: gray; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
+<div class="w3-content w3-display-container" style="width:40%; height: screen.height - 5px; background-color: 
+	white;">
 
     <!-- poster hvert billed der er i mappen[Billeder] -->
     <?php
@@ -62,8 +63,8 @@
 
     <!-- Knapperne der går til højre og venste -->
    	<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%;">
-    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <div class="w3-left w3-hover-text-khaki" style="color: red;"  onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" style="color: red; " onclick="plusDivs(1)">&#10095;</div>
     <!-- End of knapperne -->
 
     <?php
