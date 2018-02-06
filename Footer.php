@@ -7,7 +7,7 @@
 <footer class="kontakt">
 	<?php
 	
-	$file = file_get_contents('./KontaktInfo.txt', true);
+	$file = file_get_contents('./SideTekst/KontaktInfo.txt', true);
 	
 	echo $file;
 

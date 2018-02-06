@@ -17,40 +17,37 @@
 
 </style>
 
-
-
-<body id="FrontBody">
-	<div style="padding-bottom: 5%;">
-	</div>
+<body>
 <!-- Nav bar -->
-<div id="FrontNavBar">
-	<center>
-		<ul id = "FrontNavBar">
-		<li><a class="ative" href=""> FORSIDE </a></li>	
-		<li><a href=""> GRAVID </a></li>	
-		<li><a href=""> BØRN / FAMILIE </a></li>	
-		<li><a href=""> BRYLLUP </a></li>
-		<li><a href=""> MODE </a></li>	
-		<li><a class="dropbtn" href=""> ANDET </a></li>
-			<div class="dropdown-content" >
-				<li><a>	Link1 </a></li>
-				<li><a> Link2 </a></li>
-				<li><a> Link3 </a></li>
-			</div>
-	</ul>
-	</center>
-</div>
+<?php
+	include "Header.php";
+?>
 <!-- End of nav bar -->
 
-<div class="w3-content w3-display-container" style="max-width:55%; height: screen.height - 5px; background-color: gray;">
+<div style="text-align: center; font-size: 24px; ">
+	<br>
+	<?php
+	
+	$file = file_get_contents('./SideTekst/ForsideInfo.txt', true);
+	
+	echo $file;
+
+	?>
+</div>
+
+
+<div class="w3-content w3-display-container" style="width:40%; height: screen.height - 5px; background-color: 
+	white;">
 
     <!-- poster hvert billed der er i mappen[Billeder] -->
     <?php
     // Fortæller hvor hvad for en mappe den skal kigge i.
-    $dirname = "Billeder/";
+    $dirname = "Billeder/DiaShow/";
 
     // Enhver fil der lægger i den mappe som ender på .jpg, henter den.
     $images = glob($dirname."*.jpg");
+
+    echo '<br>';
 
     // For hver .jpg den finder printer den det så ud i vores diashow.
     foreach ($images as $image) {
@@ -62,8 +59,8 @@
 
     <!-- Knapperne der går til højre og venste -->
    	<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%;">
-    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <div class="w3-left w3-hover-text-khaki" style="color: red;"  onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" style="color: red; " onclick="plusDivs(1)">&#10095;</div>
     <!-- End of knapperne -->
 
     <?php
@@ -144,6 +141,8 @@ function showDivs(n) {
 	 		div.hide();
 	 	})  
 	});
+
+	$("#forside").addClass("ative");
 
 
 

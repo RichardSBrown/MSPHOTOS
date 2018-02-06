@@ -3,32 +3,56 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="Stylesheet.css">
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<img style="max-height: 250px; max-width: 250px; display: block; margin-left: auto; margin-right: auto;" src="Logo1.png">
+
+	<div id="FrontNavBar">
+		<ul id = "FrontNavBar">
+		<li><a id="forside" class="" href="Index.php"> FORSIDE </a></li>	
+		<li><a id="gravid" class="" href="Gravid.php"> GRAVID </a></li>	
+		<li><a id="børn" href="Børn.php"> BØRN / FAMILIE </a></li>	
+		<li><a id="bryllup" href="Bryllup.php"> BRYLLUP </a></li>
+		<li><a id="mode" href="Mode.php"> MODE </a></li>	
+		<li><a class="dropbtn" href=""> ANDET </a></li>
+			<div class="dropdown-content" >
+				<li><a href="#">Kontakt</a></li>
+				<li><a href="#">Prisliste</a></li>
+				<li><a href="#">Facebook</a></li>
+			</div>
+	</ul>
+</div>
+
 </head>
-<body oncontextmenu="return false;">
+<body>
 <header>
-	<h1>Insæt en form for tekst eller noget her hvis det lyster...</h1>
-	<div class="navbar">
-		<div class="container">
-			<a href="#">Forside</a>
-			<a href="#">Gravid</a>
-			<a href="#">Børn/Familie</a>
-			<a href="#">Bryllup</a>
-			<a href="#">Mode</a>
-		<div class="dropdown">
-	    	<button class="dropbtn">Dropdown
-    	  	<i class="fa fa-caret-down"></i>
-    		</button>
-    		<div class="dropdown-content">
-    			<a href="#">Kontakt</a>
-    			<a href="#">Prisliste</a>
-    			<a href="#">Facebook</a>    		
-    		</div>
- 		</div>
- 		</div>
-	</div> 
+
 </header>
 </body>
 </html>
+
+<script type="text/javascript">
+	 $(document).ready(function(){
+	 	var knap = $(".dropbtn");
+	 	var div = $(".dropdown-content");
+
+	 	div.mouseenter(function(){
+	 		div.show();
+	 	})
+	 	div.mouseleave(function(){
+	 		div.hide();
+	 	}) 
+
+	 	knap.mouseenter(function(){
+	 		div.show();
+	 	})
+	 	knap.mouseleave(function(){
+	 		div.hide();
+	 	})  
+	});
+</script>
+
+
 
 <!-- 
 Forside.
